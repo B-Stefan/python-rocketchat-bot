@@ -10,7 +10,7 @@ class RocketChatBot():
         
         self._prefixs = []
         
-        self.client = client = MeteorClient('wss://demo.rocket.chat/websocket')
+        self.client = client = MeteorClient('wss://{0}/websocket'.format(server))
         
         # registering internal handlers
         self.client.on('connected', self._connected)
